@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'Pages/Accueil.dart';
 import 'Pages/connexion.dart';
 import 'Pages/inscription.dart';
+import 'Pages/messages.dart';
 
 void main() {
   runApp(const NekaSugu());
@@ -32,6 +33,7 @@ class _NekaSuguState extends State<NekaSugu> {
         appBar: AppBar(
           //ENTETE CONTENUES DES DIFFERENTES PAGES
           title: [
+            Text("Message"),
             Text("Accueil"),
             Text("Connexion"),
             Text("Inscription"),
@@ -40,9 +42,10 @@ class _NekaSuguState extends State<NekaSugu> {
 
         // body: Accueil(),
         body: [
-          Inscription(),
+          Message(),
           Accueil(),
           Connexion(),
+          Inscription(),
         ][_currentIndex],
 
         bottomNavigationBar: BottomNavigationBar(
@@ -60,13 +63,17 @@ class _NekaSuguState extends State<NekaSugu> {
             // elevation: 30,
             items: const [
               // Accueil ::::::::::::::::
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.send), label: 'Messages'),
+
+              // Accueil ::::::::::::::::
               BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Accueil'),
 
-              //   ::::::::::::::::::::::
+              //  Connexion ::::::::::::::::::::::
               BottomNavigationBarItem(
-                  icon: Icon(Icons.calendar_month), label: 'Connexion'),
+                  icon: Icon(Icons.people), label: 'Connexion'),
 
-              //   ::::::::::::::::::::::
+              //   Inscription::::::::::::::::::::::
               BottomNavigationBarItem(
                   icon: Icon(Icons.add), label: 'Inscription'),
             ]),
