@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class Connexion extends StatelessWidget {
-  const Connexion({super.key});
+class DetailMessage extends StatelessWidget {
+  const DetailMessage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("connexion"),
+          title: Text("Détail Message"),
         ),
         body: Center(
-          child: Text("Corps....."),
+          child: Text("Message....."),
         ));
   }
 }

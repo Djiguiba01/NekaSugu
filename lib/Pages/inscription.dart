@@ -1,5 +1,7 @@
 import 'package:date_field/date_field.dart';
 import 'package:flutter/material.dart';
+import 'package:nekasugu/Pages/connexion.dart';
+import 'package:nekasugu/SousPages/messagedetail.dart';
 
 class Inscription extends StatefulWidget {
   const Inscription({super.key});
@@ -149,6 +151,14 @@ class _InscriptionState extends State<Inscription> {
 
                       ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(content: Text("Envoi en cours...")));
+
+                      // REDIRECTION VERS LA PAGE CONNEXION :::::::
+                      Navigator.push(
+                        context,
+                        PageRouteBuilder(
+                            pageBuilder: (_, __, ___) => Connexion()),
+                      );
+                      
                       // print("Nom $confNom Prenom $confPrenom sexe $selectSexe Date $selectDate"); // Afficher champs à la console
                     }
                     // Fermer le clavier si on clique sur button
@@ -156,7 +166,29 @@ class _InscriptionState extends State<Inscription> {
                   },
                   child: Text("Envoyer"),
                 ),
-              )
+              ),
+
+              // ESPACEMENT::
+              Padding(padding: EdgeInsets.only(top: 10)),
+
+              // :::::::: BUTTON:::::::::::::
+              // ElevatedButton.icon(
+              //   style: ButtonStyle(
+              //       padding: MaterialStatePropertyAll(EdgeInsets.all(20)),
+              //       backgroundColor: MaterialStatePropertyAll(Colors.green)),
+              //   onPressed: () {
+              //     Navigator.push(
+              //       context,
+              //       PageRouteBuilder(
+              //           pageBuilder: (_, __, ___) => DetailMessage()),
+              //     );
+              //   },
+              //   label: Text(
+              //     "Voir",
+              //     style: TextStyle(fontSize: 20),
+              //   ),
+              //   icon: Icon(Icons.send),
+              // ),
             ],
           )),
     );

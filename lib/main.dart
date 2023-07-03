@@ -29,21 +29,27 @@ class _NekaSuguState extends State<NekaSugu> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: "NekaSugu",
+      debugShowCheckedModeBanner: false, // Faire disparaçitre {DEBUG}
+      theme: ThemeData(scaffoldBackgroundColor: Color(0xFFF5F5F3)),
+      // routes: {
+      //   "/": (context) => Connexion(),
+      // },
       home: Scaffold(
-        appBar: AppBar(
-          //ENTETE CONTENUES DES DIFFERENTES PAGES
-          title: [
-            Text("Message"),
-            Text("Accueil"),
-            Text("Connexion"),
-            Text("Inscription"),
-          ][_currentIndex],
-        ),
+        // appBar: AppBar(
+        //   //ENTETE CONTENUES DES DIFFERENTES PAGES
+        //   title: [
+        //     Text("Accueil"),
+        //     Text("Message"),
+        //     Text("Connexion"),
+        //     Text("Inscription"),
+        //   ][_currentIndex],
+        // ),
 
         // body: Accueil(),
         body: [
-          Message(),
           Accueil(),
+          Message(),
           Connexion(),
           Inscription(),
         ][_currentIndex],
@@ -63,11 +69,11 @@ class _NekaSuguState extends State<NekaSugu> {
             // elevation: 30,
             items: const [
               // Accueil ::::::::::::::::
+              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Accueil'),
+
+              // Message ::::::::::::::::
               BottomNavigationBarItem(
                   icon: Icon(Icons.send), label: 'Messages'),
-
-              // Accueil ::::::::::::::::
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Accueil'),
 
               //  Connexion ::::::::::::::::::::::
               BottomNavigationBarItem(
