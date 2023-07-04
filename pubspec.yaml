@@ -35,7 +35,10 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  date_field: ^3.0.5
+  date_field: ^3.0.5 # Pour Utiliser la Date 
+  flutter_rating_bar: ^4.0.1 #Inserer les etoiles
+  clippy_flutter: ^2.0.0-nullsafety.1
+
 
 dev_dependencies:
   flutter_test:

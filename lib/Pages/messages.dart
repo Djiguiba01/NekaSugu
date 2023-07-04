@@ -51,30 +51,32 @@ class _MessageState extends State<Message> {
       //   title: Text("Messages"),
       // ),
       body: Center(
+        //  GENERER AUTOMATIQUEMENT LES MESSAGES QUI SONT DANS LA BASE DE DONNEE (STATIQUE)
+        child: ListView.builder(
+          itemCount: envoimessage.length, //=>
 
-          //  GENERER AUTOMATIQUEMENT LES MESSAGES QUI SONT DANS LA BASE DE DONNEE (STATIQUE)
-          child: ListView.builder(
-        itemCount: envoimessage.length, //=>
+          itemBuilder: (context, index) {
+            // Appel des variables:::::::
+            final message = envoimessage[index];
+            final photo = message['photo'];
+            final nomComplet = message['nomComplet'];
+            final description = message['description'];
+            final date = message['date'];
 
-        itemBuilder: (context, index) {
-          // Appel des variables:::::::
-          final message = envoimessage[index];
-          final photo = message['photo'];
-          final nomComplet = message['nomComplet'];
-          final description = message['description'];
-          final date = message['date'];
-
-          //  CONTENU MESSAGES AFFICHAGE QUI SONT DANS LA BASE DE DONNEE::::::::::::
-          return Card(
-            child: ListTile(
-              leading: Image.asset("assets/images/$photo.jpg"),
-              title: Text('$nomComplet ($date)'),
-              subtitle: Text('$description'),
-              trailing: Icon(Icons.more_vert),
-            ),
-          );
-        },
-      )),
+            //  CONTENU MESSAGES AFFICHAGE QUI SONT DANS LA BASE DE DONNEE::::::::::::
+            return Card(
+              child: ListTile(
+                leading: Image.asset("assets/images/$photo.jpg"),
+                title: Text('$nomComplet ($date)'),
+                subtitle: Text('$description'),
+                trailing: Icon(Icons.more_vert),
+              ),
+            );
+          },
+        ),
+        
+      ),
+    
     );
   }
 }

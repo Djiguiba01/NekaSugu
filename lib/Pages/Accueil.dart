@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'CategoriesPage.dart';
+import 'package:nekasugu/Pages/MenuContenu.dart';
+import '../AccueilPages/CategoriesPage.dart';
+import '../AccueilPages/Poste.dart';
+import '../AccueilPages/Produits.dart';
 import 'EntetePage.dart';
-import 'Produits.dart';
 
 class Accueil extends StatelessWidget {
   const Accueil({super.key});
@@ -90,7 +91,7 @@ class Accueil extends StatelessWidget {
           // Appel Page CategoriesPage:::::::::::::::::
           CategoriesPage(),
 
-          // PARTIE RRRRRRRRRAAA:::::::::::::::::::::::::::::::::::
+          // PARTIE PRODUITS:::::::::::::::::::::::::::::::::::
           Padding(
             padding: EdgeInsets.only(top: 20, left: 10),
             child: Text(
@@ -103,7 +104,51 @@ class Accueil extends StatelessWidget {
           ),
           // Appel Page Produits:::::::::::::::
           Produits(),
+
+          // PARTIE POSTES:::::::::::::::::::::::::::::::::::
+          Padding(
+            padding: EdgeInsets.only(top: 20, left: 10),
+            child: Text(
+              "Postes",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
+            ),
+          ),
+          // Appel Page Poste:::::::::::::::
+          Poste(),
         ],
+      ),
+
+      // Appel Page Poste:::::::::::::::
+      drawer: MenuContenu(),
+
+      // PARTIE BUTTON PANIER::::::::::::::::::::
+      floatingActionButton: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 2,
+              blurRadius: 10,
+              offset: Offset(0, 3),
+            ),
+          ],
+        ),
+        // Action Button:::::::
+        child: FloatingActionButton(
+          onPressed: () {
+            
+           },
+          child: Icon(
+            CupertinoIcons.cart,
+            size: 28,
+            color: Colors.red,
+          ),
+          backgroundColor: Colors.white,
+        ),
       ),
     );
   }

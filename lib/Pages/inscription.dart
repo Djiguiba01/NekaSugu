@@ -158,7 +158,7 @@ class _InscriptionState extends State<Inscription> {
                         PageRouteBuilder(
                             pageBuilder: (_, __, ___) => Connexion()),
                       );
-                      
+
                       // print("Nom $confNom Prenom $confPrenom sexe $selectSexe Date $selectDate"); // Afficher champs à la console
                     }
                     // Fermer le clavier si on clique sur button

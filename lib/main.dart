@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'AccueilPages/SousPages/PosteDetail.dart';
 import 'Pages/Accueil.dart';
 import 'Pages/connexion.dart';
 import 'Pages/inscription.dart';
@@ -32,9 +33,10 @@ class _NekaSuguState extends State<NekaSugu> {
       title: "NekaSugu",
       debugShowCheckedModeBanner: false, // Faire disparaçitre {DEBUG}
       theme: ThemeData(scaffoldBackgroundColor: Color(0xFFF5F5F3)),
-      // routes: {
-      //   "/": (context) => Connexion(),
-      // },
+      routes: {
+        // "/": (context) => Connexion(),
+        "PosteDetail": (context) => PosteDetail(),
+      },
       home: Scaffold(
         // appBar: AppBar(
         //   //ENTETE CONTENUES DES DIFFERENTES PAGES

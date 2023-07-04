@@ -11,10 +11,12 @@ class EntetePage extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          
           // 1111111/::::::::::::::::::::::::::
           InkWell(
-            onTap: () {},
+            // Si on tape sur Icon Menu Page MenuContenu s'ouvre::
+            onTap: () {
+              Scaffold.of(context).openDrawer();
+            },
             child: Container(
               padding: EdgeInsets.all(8),
               decoration: BoxDecoration(

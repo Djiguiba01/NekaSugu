@@ -46,12 +46,17 @@ class _ProduitsState extends State<Produits> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       // INSERTION image et TEXTE dans Card:::::::
                       children: [
-                        Container(
-                          // Insertion Image:::::::::
-                          alignment: Alignment.center,
-                          padding: EdgeInsets.only(top: 4),
-                          child: Image.asset("assets/images/papa.jpg"),
-                          height: 130,
+                        InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, "Inscription");
+                          },
+                          child: Container(
+                            // Insertion Image:::::::::
+                            alignment: Alignment.center,
+                            padding: EdgeInsets.only(top: 4),
+                            child: Image.asset("assets/images/papa.jpg"),
+                            height: 130,
+                          ),
                         ),
                         // ENTETE Text::::::::::::::
                         Text(
