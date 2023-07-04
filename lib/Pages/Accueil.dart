@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'CategoriesPage.dart';
 import 'EntetePage.dart';
+import 'Produits.dart';
 
 class Accueil extends StatelessWidget {
   const Accueil({super.key});
@@ -88,6 +89,20 @@ class Accueil extends StatelessWidget {
 
           // Appel Page CategoriesPage:::::::::::::::::
           CategoriesPage(),
+
+          // PARTIE RRRRRRRRRAAA:::::::::::::::::::::::::::::::::::
+          Padding(
+            padding: EdgeInsets.only(top: 20, left: 10),
+            child: Text(
+              "Produits",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
+            ),
+          ),
+          // Appel Page Produits:::::::::::::::
+          Produits(),
         ],
       ),
     );

@@ -18,9 +18,8 @@ class _CategoriesPageState extends State<CategoriesPage> {
         padding: EdgeInsets.symmetric(vertical: 15, horizontal: 5),
         child: Row(
           children: [
-
-            for (int i = 0; i < 15; i++) // Prendre 15 Images:::::::
-
+            // Création Boucle Prendre 15 Card:::::::
+            for (int i = 0; i < 15; i++)
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10),
 
@@ -52,7 +51,6 @@ class _CategoriesPageState extends State<CategoriesPage> {
       ),
 
       // 2222::::::::::::::::::
-      
     );
   }
 }
