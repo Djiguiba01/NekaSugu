@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:nekasugu/Pages/inscriptionPage.dart';
 import 'AccueilPages/SousPages/PosteDetail.dart';
 import 'Pages/Accueil.dart';
-import 'Pages/connexion.dart';
-import 'Pages/inscription.dart';
+import 'Pages/connexionPage.dart';
+import 'Pages/essai.dart';
+import 'Pages/voirinscription.dart';
 import 'Pages/messages.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const NekaSugu());
@@ -29,13 +32,16 @@ class _NekaSuguState extends State<NekaSugu> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: "NekaSugu",
       debugShowCheckedModeBanner: false, // Faire disparaçitre {DEBUG}
-      theme: ThemeData(scaffoldBackgroundColor: Color(0xFFF5F5F3)),
+      // theme: ThemeData(scaffoldBackgroundColor: Color(0xFFF5F5F3)),
+      theme: ThemeData(scaffoldBackgroundColor: Colors.white),
       routes: {
         // "/": (context) => Connexion(),
+        "Accueil": (context) => Accueil(),
         "PosteDetail": (context) => PosteDetail(),
+        "ConnexionPage": (context) => ConnexionPage(),
       },
       home: Scaffold(
         // appBar: AppBar(
@@ -50,9 +56,11 @@ class _NekaSuguState extends State<NekaSugu> {
 
         // body: Accueil(),
         body: [
+          // essai(),
+          inscriptionPage(),
+          ConnexionPage(),
           Accueil(),
           Message(),
-          Connexion(),
           Inscription(),
         ][_currentIndex],
 

@@ -44,33 +44,33 @@ class Accueil extends StatelessWidget {
                   horizontal: 10,
                 ),
                 // La Loup Icon:::::::::::::
-                child: Row(
-                  children: [
-                    Icon(
-                      CupertinoIcons.search,
-                      color: Colors.red,
-                    ),
-                    Container(
-                      height: 50,
-                      width: 300,
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 15,
-                        ),
-                        // Placeholder:::::::::::::::
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                            hintText: "Recherche...",
-                            border: InputBorder.none,
-                          ),
-                        ),
-                      ),
-                    ),
+                // child: Row(
+                //   children: [
+                //     Icon(
+                //       CupertinoIcons.search,
+                //       color: Colors.red,
+                //     ),
+                //     Container(
+                //       height: 50,
+                //       width: 300,
+                //       child: Padding(
+                //         padding: EdgeInsets.symmetric(
+                //           horizontal: 15,
+                //         ),
+                //         // Placeholder:::::::::::::::
+                //         child: TextFormField(
+                //           decoration: InputDecoration(
+                //             hintText: "Recherche...",
+                //             border: InputBorder.none,
+                //           ),
+                //         ),
+                //       ),
+                //     ),
 
-                    // Icon Filter::::::::::::::::
-                    Icon(Icons.filter_list),
-                  ],
-                ),
+                //     // Icon Filter::::::::::::::::
+                //     Icon(Icons.filter_list),
+                //   ],
+                // ),
               ),
             ),
           ),
@@ -139,9 +139,7 @@ class Accueil extends StatelessWidget {
         ),
         // Action Button:::::::
         child: FloatingActionButton(
-          onPressed: () {
-            
-           },
+          onPressed: () {},
           child: Icon(
             CupertinoIcons.cart,
             size: 28,

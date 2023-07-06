@@ -1,7 +1,6 @@
 import 'package:date_field/date_field.dart';
 import 'package:flutter/material.dart';
-import 'package:nekasugu/Pages/connexion.dart';
-import 'package:nekasugu/SousPages/messagedetail.dart';
+import 'package:nekasugu/Pages/connexionPage.dart';
 
 class Inscription extends StatefulWidget {
   const Inscription({super.key});
@@ -156,7 +155,7 @@ class _InscriptionState extends State<Inscription> {
                       Navigator.push(
                         context,
                         PageRouteBuilder(
-                            pageBuilder: (_, __, ___) => Connexion()),
+                            pageBuilder: (_, __, ___) => ConnexionPage()),
                       );
 
                       // print("Nom $confNom Prenom $confPrenom sexe $selectSexe Date $selectDate"); // Afficher champs à la console
