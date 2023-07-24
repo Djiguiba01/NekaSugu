@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:nekasugu/Pages/inscriptionPage.dart';
 import 'AccueilPages/SousPages/PosteDetail.dart';
 import 'Pages/Accueil.dart';
+import 'Pages/bienvenuePage.dart';
 import 'Pages/connexionPage.dart';
 import 'Pages/essai.dart';
 import 'Pages/voirinscription.dart';
 import 'Pages/messages.dart';
 import 'package:get/get.dart';
+import 'dart:ui';
 
 void main() {
   runApp(const NekaSugu());
@@ -57,6 +59,7 @@ class _NekaSuguState extends State<NekaSugu> {
         // body: Accueil(),
         body: [
           // essai(),
+          BienvenuePage(),
           inscriptionPage(),
           ConnexionPage(),
           Accueil(),
@@ -64,35 +67,35 @@ class _NekaSuguState extends State<NekaSugu> {
           Inscription(),
         ][_currentIndex],
 
-        bottomNavigationBar: BottomNavigationBar(
-            // Appel Méthode de sauvegade {setCurrentIndex}
-            currentIndex: _currentIndex,
-            onTap: (index) => setCurrentIndex(index), //1:::::::
-            // type: BottomNavigationBarType.fixed, //2::::::::
+        // bottomNavigationBar: BottomNavigationBar(
+        //     // Appel Méthode de sauvegade {setCurrentIndex}
+        //     currentIndex: _currentIndex,
+        //     onTap: (index) => setCurrentIndex(index), //1:::::::
+        //     // type: BottomNavigationBarType.fixed, //2::::::::
 
-            // Couleur Elément (menu) selectionné
-            selectedItemColor: Colors.teal,
-            // Couleur Elément(menu) non selectionné
-            unselectedItemColor: Colors.grey,
-            //
-            iconSize: 32,
-            // elevation: 30,
-            items: const [
-              // Accueil ::::::::::::::::
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Accueil'),
+        //     // Couleur Elément (menu) selectionné
+        //     selectedItemColor: Colors.teal,
+        //     // Couleur Elément(menu) non selectionné
+        //     unselectedItemColor: Colors.grey,
+        //     //
+        //     iconSize: 32,
+        //     // elevation: 30,
+        //     items: const [
+        //       // Accueil ::::::::::::::::
+        //       BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Accueil'),
 
-              // Message ::::::::::::::::
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.send), label: 'Messages'),
+        //       // Message ::::::::::::::::
+        //       BottomNavigationBarItem(
+        //           icon: Icon(Icons.send), label: 'Messages'),
 
-              //  Connexion ::::::::::::::::::::::
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.people), label: 'Connexion'),
+        //       //  Connexion ::::::::::::::::::::::
+        //       BottomNavigationBarItem(
+        //           icon: Icon(Icons.people), label: 'Connexion'),
 
-              //   Inscription::::::::::::::::::::::
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.add), label: 'Inscription'),
-            ]),
+        //       //   Inscription::::::::::::::::::::::
+        //       BottomNavigationBarItem(
+        //           icon: Icon(Icons.add), label: 'Inscription'),
+        //     ]),
       ),
     );
   }
